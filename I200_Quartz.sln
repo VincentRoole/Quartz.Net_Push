@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I200_GoodWarningQuartz", "I200_Quartz\I200_GoodWarningQuartz.csproj", "{2C8EF700-DB89-41D7-BA97-D4646A9DC227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I200_QuartzTests", "I200_QuartzTests\I200_QuartzTests.csproj", "{AD9282AC-78A0-4857-963F-E64A1709034B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C8EF700-DB89-41D7-BA97-D4646A9DC227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8EF700-DB89-41D7-BA97-D4646A9DC227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8EF700-DB89-41D7-BA97-D4646A9DC227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8EF700-DB89-41D7-BA97-D4646A9DC227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD9282AC-78A0-4857-963F-E64A1709034B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD9282AC-78A0-4857-963F-E64A1709034B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD9282AC-78A0-4857-963F-E64A1709034B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD9282AC-78A0-4857-963F-E64A1709034B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

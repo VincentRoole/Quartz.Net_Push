@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains job definitions in schema version 2.0 format -->
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <!--定时库存预警数据同步 任务配置-->
+    <job>
+      <name>SynchronizeGoodsWarningDataJob</name>
+      <group>SynchronizeGoodsWarningData</group>
+      <description>定时库存预警数据同步</description>
+      <job-type>I200_Quartz.QuartzJobs.SynchronizeGoodsWarningDataJob,I200_Quartz</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>SynchronizeGoodsWarningDataJobTrigger</name>
+        <group>SynchronizeGoodsWarningData</group>
+        <job-name>SynchronizeGoodsWarningDataJob</job-name>
+        <job-group>SynchronizeGoodsWarningData</job-group>
+        <start-time>2016-04-16T00:00:00+08:00</start-time>
+        <cron-expression>0 0 2 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+      
+    <!--定时推送库存预警数据给PC客户端和移动端 任务配置-->
+    <job>
+      <name>SendGoodsWarningMessageJob</name>
+      <group>SendGoodsWarningMessage</group>
+      <description>定时推送库存预警数据给PC客户端和移动端</description>
+      <job-type>I200_Quartz.QuartzJobs.SendGoodsWarningMessageJob,I200_Quartz</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>SendGoodsWarningMessageJobTrigger</name>
+        <group>SendGoodsWarningMessage</group>
+        <job-name>SendGoodsWarningMessageJob</job-name>
+        <job-group>SendGoodsWarningMessage</job-group>
+        <start-time>2016-04-16T00:00:00+08:00</start-time>
+        <cron-expression>0/5 0 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * ?</cron-expression>
+      </cron>
+    </trigger>
+  </schedule>
+</job-scheduling-data>
